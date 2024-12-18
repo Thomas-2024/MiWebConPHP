@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Retomando Programacion Web</title>
+</head>
+<body>
+    <header><!--Encabezado-->
+        <h1>Bienvenidos a Mi Pagina Web</h1>
+    </header>
+    <nav><!--Barra de navegacion donde iran los enlaces mas importantes de la pagina-->
+        <ul>
+            <li><a href="#home">Inicio</a></li><!--Aqui se utiliza un # una tecnica llamada anclaje que redirige a la seccion con la misma direccion-->
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <section id="container">
+        <h1>Bienvenido a la página</h1>
+        <p>Este es un ejemplo de cómo usar localStorage para guardar la preferencia de tema.</p>
+        <button id="toggleTheme">Cambiar a modo oscuro</button>
+    </section>
+
+    <section id="home"><!--Etiqueta que divide la pagina en secciones (evitar usar divs) si uti8lizas el anclaje quitas el # en la id-->
+        <h2>Inicio</h2>
+        <p>Este es el contenido de la seccion de inicio.</p>
+        <div id="postsContainer"></div>
+    </section>
+    <section id="services">
+        <h2>Servicios</h2>
+        <p>Estos son los servicios que ofrezco.</p>
+    </section>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de este formulario:</p>
+        <form action="" id="contactForm">
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="name">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Cargar Posts</h2>
+        <form action="" id="postForm">
+            <label for="title">Titulo: </label>
+            <input type="text" id="title" name="title">
+            <label for="body">Cuerpo: </label>
+            <textarea name="body" id="body"></textarea>
+            <button type="submit" id="sendPost">Enviar</button>
+        </form> 
+        <div id="message"></div>
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Modificar Post</h2>
+            <form id="modifyForm" action>
+                <label for="modifyTitle">Titulo:</label>
+                <input type="text" id="modifyTitle" name="modifyTitle">
+                <label for="modifyBody">Cuerpo:</label>
+                <textarea name="modifyBody" id="modifyBody"></textarea>
+                <input type="submit" id="modifyBtn" value="Enviar">
+            </form>
+        </div>
+    </div>
+    <footer><!--Pie de pagina-->
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+    <script type="module" src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/buildposts.js"></script>
+    <script type="module" src="../assets/js/fetchposts.js"></script>
+    <script type="module" src="../assets/js/assignEvents.js"></script>
+    <script type="module" src="../assets/js/sendposts.js"></script>
+    <script type="module" src="../assets/js/handleContactFormSubmit.js"></script>
+    <script type="module" src="../assets/js/autocomplete.js"></script>
+</body>
+</html>
